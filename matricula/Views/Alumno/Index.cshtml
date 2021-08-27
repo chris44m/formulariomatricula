@@ -1,0 +1,54 @@
+﻿@model matricula.Models.Alumno
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<div class="text-center">
+    
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-8">
+                <h1>@ViewData["Title"]</h1>
+                <form asp-controller="Alumno" asp-action="Create">
+                    <div class="mb-3">
+                        <label asp-for="apellidos" class="form-label">Apellidos</label>
+                        <input asp-for="apellidos" type="text" class="form-control" placeholder="Ingrese su apellido">
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="nombres" class="form-label">Nombres</label>
+                        <input asp-for="nombres" type="text" class="form-control" placeholder="Ingrese sus nombres">
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="fechanacimiento" class="form-label">Fecha de nacimiento</label>
+                        <input asp-for="fechanacimiento" type="date" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="dni" class="form-label">DNI</label>
+                        <input asp-for="dni" type="text" class="form-control" placeholder="Ingrese su DNI">
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="genero" class="form-label">Genero</label>
+                        <select asp-for="genero" name="genero" id="" class="form-control">
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                        </select>
+
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="carrera" class="form-label">Carrera</label>
+                        <select asp-for="carrera" name="carrera" id="" class="form-control">
+                            <option value="Sistemas">Sistemas</option>
+                            <option value="Admi">Admi</option>
+                            <option value="Electronica">Electronica</option>
+                        </select>
+
+                    </div>
+                    <button type="submit" class="btn btn-success">Registrar</button>
+                </form>
+                <h1>@ViewData["Message"]</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
